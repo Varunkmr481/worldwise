@@ -1,0 +1,23 @@
+1. const countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country))
+      return [...arr, { country: city.country, emoji: city.emoji }];
+    else return arr;
+}, []);
+
+
+arr : [] ,
+[]
+city : { cityName: "Lisbon",  country: "Portugal"}
+[{country : 'Portugal', emoji : 'PE'}]
+
+arr : [{country: 'Portugal', emoji: 'PE'}] ,
+['Portugal']
+city : { cityName: "Madrid", country: "Spain", }
+[{country: 'Portugal', emoji: 'PE'}, {country : 'Spain', emoji : 'ES'}]
+
+arr : [{country: 'Portugal', emoji: 'PE'}, {country : 'Spain', emoji : 'ES'}]
+city : {cityName : "Faro", country : "Portugal"}
+['Portugal', 'Spain'].includes("Portugal")
+[{country: 'Portugal', emoji: 'PE'}, {country : 'Spain', emoji : 'ES'}]
+
+2. 
