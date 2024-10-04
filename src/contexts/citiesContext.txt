@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
 
 const CitiesContext = createContext();
 const BASE_URL = "http://localhost:3000";
@@ -31,6 +32,9 @@ function CitiesProvider({ children }) {
       setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities/${id}`);
       const data = await res.json();
+      const updatedEmoji = getCountryCodeFromEmoji(data.emoji);
+      const updatedData = { ...data, emoji: updatedEmoji };
+      console.log("updated Data", updatedData);
       setCurrentCity(data);
     } catch (err) {
       alert("Error occured ");
@@ -55,5 +59,4 @@ function useCities() {
   return context;
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { CitiesProvider, useCities };
