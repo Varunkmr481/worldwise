@@ -1,4 +1,4 @@
-import styles from "./Map.module.css";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -9,18 +9,25 @@ import {
 } from "react-leaflet";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
-import "flag-icons/css/flag-icons.min.css";
-// eslint-disable-next-line
+import { useGeolocation } from "../hooks/useGeolocation";
+import Button from "../components/Button";
 import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import "flag-icons/css/flag-icons.min.css";
+import styles from "./Map.module.css";
 
 function Map() {
   const { cities } = useCities();
-  // eslint-disable-next-line no-unused-vars
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   // extract lat&lng from url & store in mapPosition
   const [searchParams] = useSearchParams();
+  const {
+    isLoading: isLoadingPosition,
+    // eslint-disable-next-line
+    position: geolocationPosition,
+    getPosition,
+  } = useGeolocation();
+
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
 
@@ -31,8 +38,21 @@ function Map() {
     [mapLat, mapLng]
   );
 
+  useEffect(
+    function () {
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition]
+  );
+
   return (
     <div className={styles.mapContainer}>
+      {!geolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         // center={[mapLat, mapLng]}
