@@ -16,7 +16,7 @@ function CitiesProvider({ children }) {
         const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         setCities(data);
-        console.log(cities);
+        // console.log(cities);
       } catch (err) {
         alert("Error occured ");
       } finally {
@@ -40,8 +40,31 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // eslint-disable-next-line
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log("data", data);
+      setCities((prevCities) => [...prevCities, data]);
+    } catch (err) {
+      alert("Error occured ");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
-    <CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity }}>
+    <CitiesContext.Provider
+      value={{ cities, isLoading, currentCity, getCity, createCity }}
+    >
       {children}
     </CitiesContext.Provider>
   );
