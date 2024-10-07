@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import "flag-icons/css/flag-icons.min.css";
+
 import Product from "./pages/product";
 import Pricing from "./pages/Pricing";
 import HomePage from "./pages/HomePage";
