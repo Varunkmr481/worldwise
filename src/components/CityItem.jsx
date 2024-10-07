@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import styles from "./CityItem.module.css";
 import { useCities } from "../contexts/CitiesContext";
+import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -11,9 +12,10 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-  // eslint-disable-next-line
   const { currentCity } = useCities();
+  // eslint-disable-next-line
   const { cityName, emoji, date, id, position } = city;
+  const codeToFlag = getCountryCodeFromEmoji(emoji);
 
   return (
     <li>
@@ -23,7 +25,8 @@ function CityItem({ city }) {
         }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
-        <span className={styles.emoji}>{emoji}</span>
+        {/* <span className={styles.emoji}>{emoji}</span> */}
+        <span className={`${styles.emoji} fi fi-${codeToFlag}`}></span>
 
         <h3 className={styles.name}>{cityName}</h3>
 

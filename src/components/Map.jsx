@@ -12,7 +12,7 @@ import { useCities } from "../contexts/CitiesContext";
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "../components/Button";
 import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
-import "flag-icons/css/flag-icons.min.css";
+
 import styles from "./Map.module.css";
 
 function Map() {
