@@ -11,7 +11,7 @@ import BackButton from "./BackButton";
 import Message from "./Message";
 import Spinner from "./Spinner";
 import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
-import { useCities } from "../contexts/CitiesContext";
+import { useCities } from "../hooks/useCities";
 import { useNavigate } from "react-router";
 
 // eslint-disable-next-line

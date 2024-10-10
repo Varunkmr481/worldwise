@@ -1,7 +1,7 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { BASE_URL } from "../config/config";
 
 const CitiesContext = createContext();
-const BASE_URL = "http://localhost:3000";
 
 // eslint-disable-next-line
 function CitiesProvider({ children }) {
@@ -92,14 +92,13 @@ function CitiesProvider({ children }) {
   );
 }
 
-function useCities() {
-  const context = useContext(CitiesContext);
-  if (context === undefined)
-    throw new Error(
-      "The CitiesContext has been used outside the scope of the CitiesProvider"
-    );
-  return context;
-}
+// function useCities() {
+//   const context = useContext(CitiesContext);
+//   if (context === undefined)
+//     throw new Error(
+//       "The CitiesContext has been used outside the scope of the CitiesProvider"
+//     );
+//   return context;
+// }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export { CitiesProvider, useCities };
+export { CitiesProvider, CitiesContext };

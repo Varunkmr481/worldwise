@@ -1,7 +1,7 @@
 import styles from "./City.module.css";
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { useCities } from "../contexts/CitiesContext";
+import { useCities } from "../hooks/useCities";
 
 import Spinner from "../components/Spinner";
 import BackButton from "./BackButton";

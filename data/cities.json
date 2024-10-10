@@ -1,15 +1,51 @@
 {
   "cities": [
     {
-      "id": "0acb",
-      "cityName": "Chinchilla de Monte Aragon",
+      "id": "516b",
+      "cityName": "Teruel",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-10-07T16:57:21.524Z",
-      "notes": "Nice city !",
+      "date": "2024-10-10T15:20:54.390Z",
+      "notes": "Beautiful city 😁",
       "position": {
-        "lat": "38.94362428004845",
-        "lng": "-1.624639773809398"
+        "lat": "40.329607730032876",
+        "lng": "-1.0867264003884605"
+      }
+    },
+    {
+      "id": "02f4",
+      "cityName": "Perdiguera",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-10-10T15:29:04.980Z",
+      "notes": "helo",
+      "position": {
+        "lat": "41.76375474773002",
+        "lng": "-0.6481933593750001"
+      }
+    },
+    {
+      "id": "3406",
+      "cityName": "Sid",
+      "country": "Slovakia",
+      "emoji": "🇸🇰",
+      "date": "2024-10-10T15:29:11.899Z",
+      "notes": "",
+      "position": {
+        "lat": "48.25459852197097",
+        "lng": "19.863281250000004"
+      }
+    },
+    {
+      "id": "89fe",
+      "cityName": "Buy",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2024-10-10T15:29:15.509Z",
+      "notes": "",
+      "position": {
+        "lat": "58.63053138433843",
+        "lng": "41.74804687500001"
       }
     }
   ]
