@@ -5,7 +5,6 @@ import { useCities } from "../hooks/useCities";
 
 import Spinner from "../components/Spinner";
 import BackButton from "./BackButton";
-// import { useSearchParams } from "react-router-dom";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
