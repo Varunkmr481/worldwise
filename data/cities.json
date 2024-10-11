@@ -13,18 +13,6 @@
       }
     },
     {
-      "id": "abe3",
-      "cityName": "Qaryah al ‘Ulya",
-      "country": "Saudi Arabia",
-      "emoji": "🇸🇦",
-      "date": "2024-10-11T04:26:28.824Z",
-      "notes": "",
-      "position": {
-        "lat": "27.001717457867915",
-        "lng": "46.40625000000001"
-      }
-    },
-    {
       "id": "c72c",
       "cityName": "Castello de Rugat",
       "country": "Spain",
@@ -46,6 +34,30 @@
       "position": {
         "lat": "27.92529696125944",
         "lng": "44.3408203125"
+      }
+    },
+    {
+      "id": "37ba",
+      "cityName": "Dikson",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2024-10-11T14:13:52.096Z",
+      "notes": "",
+      "position": {
+        "lat": "75.07620489092199",
+        "lng": "95.97656250000001"
+      }
+    },
+    {
+      "id": "c78b",
+      "cityName": "Faridabad",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-10-11T14:21:34.455Z",
+      "notes": "",
+      "position": {
+        "lat": "28.420741752564595",
+        "lng": "77.3602294921875"
       }
     }
   ]
