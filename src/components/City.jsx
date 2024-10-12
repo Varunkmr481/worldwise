@@ -5,6 +5,7 @@ import { useCities } from "../hooks/useCities";
 
 import Spinner from "../components/Spinner";
 import BackButton from "./BackButton";
+import getCountryCodeFromEmoji from "../getCountryCodeFromEmoji";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -27,6 +28,7 @@ function City() {
   );
 
   const { cityName, emoji, date, notes } = currentCity;
+  const emojiToFlag = getCountryCodeFromEmoji(emoji);
 
   if (isLoading) return <Spinner />;
 
@@ -35,7 +37,7 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          <span className={`fi fi-${emojiToFlag}`}></span> {cityName}
         </h3>
       </div>
 
