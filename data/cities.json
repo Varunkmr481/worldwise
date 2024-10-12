@@ -13,18 +13,6 @@
       }
     },
     {
-      "id": "c72c",
-      "cityName": "Castello de Rugat",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-11T05:23:30.670Z",
-      "notes": "",
-      "position": {
-        "lat": "38.88491613700936",
-        "lng": "-0.406494140625"
-      }
-    },
-    {
       "id": "4412",
       "cityName": "Al Asyaḩ",
       "country": "Saudi Arabia",
@@ -58,6 +46,42 @@
       "position": {
         "lat": "28.420741752564595",
         "lng": "77.3602294921875"
+      }
+    },
+    {
+      "id": "4055",
+      "cityName": "Madi",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-10-11T16:50:02.544Z",
+      "notes": "good trip ❤️",
+      "position": {
+        "lat": "28.49976327940594",
+        "lng": "84.15527343750001"
+      }
+    },
+    {
+      "id": "1ee8",
+      "cityName": "Porreres",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-10-12T04:51:40.926Z",
+      "notes": "",
+      "position": {
+        "lat": "39.51007615692269",
+        "lng": "3.0322265625000004"
+      }
+    },
+    {
+      "id": "be5f",
+      "cityName": "Mumbwa",
+      "country": "Zambia",
+      "emoji": "🇿🇲",
+      "date": "2024-10-12T04:52:03.342Z",
+      "notes": "OKay okay \n",
+      "position": {
+        "lat": "-14.831121875769114",
+        "lng": "26.542968750000004"
       }
     }
   ]
