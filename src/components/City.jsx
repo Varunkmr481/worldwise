@@ -23,8 +23,7 @@ function City() {
     function () {
       getCity(id);
     },
-    // eslint-disable-next-line
-    [id]
+    [id, getCity]
   );
 
   const { cityName, emoji, date, notes } = currentCity;
